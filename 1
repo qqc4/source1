@@ -281,7 +281,7 @@ for i,v in next, game:GetService("Players").LocalPlayer.Character:GetDescendants
     
     game:GetService("StarterGui"):SetCore("SendNotification", { 
         Title = "Notification";
-        Text = "Netless Done..";
+        Text = "Control Z & X & C";
         Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
     Duration = 16;
     
@@ -290,6 +290,12 @@ end)
 local FirstLabel = FirstPage.AddLabel("Script")
 
 local FirstButton = FirstPage.AddButton("Small PP", function()
+
+character = game:GetService("Players").LocalPlayer.Character
+
+	rightArm = character:FindFirstChild("Right Arm")
+	if rightArm then rightArm:Destroy() end
+	wait(.4)
 local tog = true
 local jit = Vector3.new(25.01,0,0)
 local Player = game:GetService("Players").LocalPlayer
@@ -1531,6 +1537,68 @@ srv.RenderStepped:Wait()
 end
 end)()
 --Created using Nexo Animator v4
+end)
+
+
+local FirstPage = MainUI.AddPage("Radio")
+
+local FirstLabel = FirstPage.AddLabel("For Radio")
+
+local FirstButton = FirstPage.AddButton("Start Dubbing", function()
+    _G.Drop = true
+    while _G.Drop == true do
+        game.Players.LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+    wait()
+    game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Parent = game.Workspace
+    local args = {
+        [1] = ";re"
+    }
+    
+    game:GetService("ReplicatedStorage").HDAdminClient.Signals.RequestCommand:InvokeServer(unpack(args))
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game.Players.LocalPlayer.Character.HumanoidRootPart.Position + Vector3.new(0, 10, 0))
+    wait(1.1)
+end  
+end)
+
+local FirstButton = FirstPage.AddButton("Stop Dubbing", function()
+    _G.Drop = false
+end)
+
+local FirstButton = FirstPage.AddButton("Visible", function()
+local args = {
+        [1] = ";visible "
+    }
+game:GetService("ReplicatedStorage").HDAdminClient.Signals.RequestCommand:InvokeServer(unpack(args))    
+end)
+
+
+local FirstLabel = FirstPage.AddLabel("Radio")
+
+local FirstButton = FirstPage.AddButton("PP (7 Tools)", function()
+    local plr = game:GetService("Players").LocalPlayer; plr.Character.Humanoid:UnequipTools()
+	local Tools = plr.Backpack:GetChildren()
+   
+	Tools[1].Grip = CFrame.new(0.2, 1.6, 1.5) * CFrame.Angles(0, math.rad(-90), 0)
+	Tools[1].Parent = plr.Character
+	
+    Tools[2].Grip = CFrame.new(-1.4, 1.6, 1.5) * CFrame.Angles(0, math.rad(-90), 0)
+	Tools[2].Parent = plr.Character
+	
+	Tools[3].Grip = CFrame.new(-3.0, 1.6, 1.5) * CFrame.Angles(0, math.rad(-90), 0)
+	Tools[3].Parent = plr.Character
+	
+	Tools[4].Grip = CFrame.new(-4.6, 1.6, 1.5) * CFrame.Angles(0, math.rad(-90), 0)
+	Tools[4].Parent = plr.Character
+	
+	Tools[5].Grip = CFrame.new(-6.3, 1.6, 1.5) * CFrame.Angles(0, math.rad(-90), 0)
+	Tools[5].Parent = plr.Character
+	
+	Tools[6].Grip = CFrame.new(-8.0, 1.6, 1.5) * CFrame.Angles(0, math.rad(-90), 0)
+	Tools[6].Parent = plr.Character
+	
+	Tools[7].Grip = CFrame.new(-1.5, 2.0, 1.0) * CFrame.Angles(0, math.rad(-180), 0)
+	Tools[7].Parent = plr.Character
+	
 end)
 
 local FirstPage = MainUI.AddPage("Re & Admin")
