@@ -1498,11 +1498,11 @@ elseif Root.Velocity.y < -1 then -- fall
 --fall clerp here
 elseif Root.Velocity.Magnitude < 2 then -- idle
 NECK.C0 = NECK.C0:Lerp(CF(0+0*math.cos(sine/13),2+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(0+0*math.sin(sine/13)),RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13))),.3)
-RJ.C0 = RJ.C0:Lerp(CF(0+0*math.cos(sine/13),3+0.3*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(0+5*math.sin(sine/13)),RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13))),.3)
-RS.C0 = RS.C0:Lerp(CF(1.5+0*math.cos(sine/13),1+-0.3*math.sin(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(52+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13)),RAD(-10+0*math.cos(sine/13))),.3)
-LS.C0 = LS.C0:Lerp(CF(-1.5+0*math.cos(sine/13),1+-0.3*math.sin(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(-30+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13)),RAD(10+0*math.cos(sine/13))),.3)
-RH.C0 = RH.C0:Lerp(CF(1+0*math.cos(sine/13),-2.5+-0.3*math.cos(sine/13),-0.7+0*math.cos(sine/13))*ANGLES(RAD(0+-10*math.sin(sine/13)),RAD(-10+0*math.cos(sine/13)),RAD(5+0*math.sin(sine/13))),.3)
-LH.C0 = LH.C0:Lerp(CF(-1+0*math.cos(sine/13),-2.5+-0.3*math.cos(sine/13),0.6+0*math.cos(sine/13))*ANGLES(RAD(-30+-10*math.sin(sine/13)),RAD(10+0*math.cos(sine/13)),RAD(-5+0*math.sin(sine/13))),.3)
+RJ.C0 = RJ.C0:Lerp(CF(0+0*math.cos(sine/13),3+0.3*math.cos(sine/15),0+0*math.cos(sine/13))*ANGLES(RAD(0+5*math.sin(sine/111)),RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13))),.3)
+RS.C0 = RS.C0:Lerp(CF(2.5+0*math.cos(sine/13),1.2+-0.3*math.sin(sine/131),0+0*math.cos(sine/13))*ANGLES(RAD(-5+8*math.cos(sine/13)),RAD(0+0*math.cos(sine/13)),RAD(10+0*math.cos(sine/13))),.3)
+LS.C0 = LS.C0:Lerp(CF(-2.5+0*math.cos(sine/13),1.2+-0.3*math.sin(sine/131),0+0*math.cos(sine/13))*ANGLES(RAD(-5+8*math.cos(sine/13)),RAD(0+0*math.cos(sine/13)),RAD(-10+0*math.cos(sine/13))),.3)
+RH.C0 = RH.C0:Lerp(CF(1.2+0*math.cos(sine/13),-2.4+-0.4*math.cos(sine/999),-0.2+0*math.cos(sine/13))*ANGLES(RAD(0+-10*math.sin(sine/100)),RAD(-10+0*math.cos(sine/13)),RAD(5+0*math.sin(sine/13))),.3)
+LH.C0 = LH.C0:Lerp(CF(-1.2+0*math.cos(sine/13),-2.4+-0.4*math.cos(sine/999),-0.2+0*math.cos(sine/13))*ANGLES(RAD(0+-10*math.sin(sine/100)),RAD(10+0*math.cos(sine/13)),RAD(-5+0*math.sin(sine/13))),.3)
 elseif Root.Velocity.Magnitude < 20 then -- walk
 NECK.C0 = NECK.C0:Lerp(CF(0+0*math.cos(sine/13),2+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13))-Root.Velocity.Y/50,RAD(0+0*math.cos(sine/13))),.3)
 RJ.C0 = RJ.C0:Lerp(CF(0+0*math.cos(sine/4),3+0.3*math.cos(sine/4),0+0*math.cos(sine/4))*ANGLES(RAD(-15+5*math.sin(sine/4))*lookvel,RAD(0+0*math.cos(sine/4)),RAD(-15+5*math.sin(sine/4))*rightvel),.3)
@@ -1536,7 +1536,6 @@ end
 srv.RenderStepped:Wait()
 end
 end)()
---Created using Nexo Animator v4
 end)
 
 
@@ -1574,7 +1573,7 @@ end)
 
 local FirstLabel = FirstPage.AddLabel("Radio")
 
-local FirstButton = FirstPage.AddButton("PP (7 Tools)", function()
+local FirstButton = FirstPage.AddButton("PP (7)", function()
     local plr = game:GetService("Players").LocalPlayer; plr.Character.Humanoid:UnequipTools()
 	local Tools = plr.Backpack:GetChildren()
    
@@ -1601,7 +1600,7 @@ local FirstButton = FirstPage.AddButton("PP (7 Tools)", function()
 	
 end)
 
-local FirstButton = FirstPage.AddButton("AK-47 (20 Tools)", function()
+local FirstButton = FirstPage.AddButton("AK-47 (20)", function()
  local plr = game:GetService("Players").LocalPlayer; plr.Character.Humanoid:UnequipTools()
  local Tools = plr.Backpack:GetChildren()
 
@@ -1666,7 +1665,7 @@ local FirstButton = FirstPage.AddButton("AK-47 (20 Tools)", function()
  Tools[20].Parent = plr.Character
 end)
 
-local FirstButton = FirstPage.AddButton("AK-47 (2) (15 Tools)", function()
+local FirstButton = FirstPage.AddButton("AK-47 [2] (15)", function()
  local plr = game:GetService("Players").LocalPlayer; plr.Character.Humanoid:UnequipTools()
  local Tools = plr.Backpack:GetChildren()
 
@@ -1714,6 +1713,75 @@ local FirstButton = FirstPage.AddButton("AK-47 (2) (15 Tools)", function()
 
  Tools[15].Grip = CFrame.new(6.5, 4.1, -0.1) * CFrame.Angles(1.6, math.rad(110), 1.6)
  Tools[15].Parent = plr.Character
+end)
+
+local FirstButton = FirstPage.AddButton("Pickaxe (8)", function()
+
+ local plr = game:GetService("Players").LocalPlayer; plr.Character.Humanoid:UnequipTools()
+ local Tools = plr.Backpack:GetChildren()
+
+ Tools[1].Grip = CFrame.new(-0.4, 0.6, 0) * CFrame.Angles(1.6, math.rad(-180), 1.58)
+ Tools[1].Parent = plr.Character
+
+ Tools[2].Grip = CFrame.new(-2.7, 0.6, 0) * CFrame.Angles(1.6, math.rad(-180), 1.58)
+ Tools[2].Parent = plr.Character
+
+ Tools[3].Grip = CFrame.new(-4.5, 0.6, 0) * CFrame.Angles(1.6, math.rad(-180), 1.58)
+ Tools[3].Parent = plr.Character
+
+ Tools[4].Grip = CFrame.new(-6.3, 0.6, 0) * CFrame.Angles(1.6, math.rad(-180), 1.58)
+ Tools[4].Parent = plr.Character
+
+ Tools[5].Grip = CFrame.new(-0.3, 6.85, -0.4) * CFrame.Angles(38.5, math.rad(-270), 2.3)
+ Tools[5].Parent = plr.Character
+
+ Tools[6].Grip = CFrame.new(1.8, 6.85, -0.4) * CFrame.Angles(38.5, math.rad(-270), 2.3)
+ Tools[6].Parent = plr.Character
+
+ Tools[7].Grip = CFrame.new(3.3, 5.4, 0.32) * CFrame.Angles(1.6, math.rad(-320), 1.6)
+ Tools[7].Parent = plr.Character
+
+ Tools[8].Grip = CFrame.new(-2.42, 6.6, 0.32) * CFrame.Angles(1.6, math.rad(-220), 1.6)
+ Tools[8].Parent = plr.Character
+
+end)
+
+
+local FirstButton = FirstPage.AddButton("Sword (10)", function()
+
+
+ local plr = game:GetService("Players").LocalPlayer; plr.Character.Humanoid:UnequipTools()
+ local Tools = plr.Backpack:GetChildren()
+
+ Tools[1].Grip = CFrame.new(0, -0.3, 0) * CFrame.Angles(1.58, math.rad(-360), 1.58)
+ Tools[1].Parent = plr.Character
+
+ Tools[2].Grip = CFrame.new(0.15, 1.7, -0.02) * CFrame.Angles(1.58, math.rad(90), 1.58)
+ Tools[2].Parent = plr.Character
+
+ Tools[3].Grip = CFrame.new(3, -0.9, -0.05) * CFrame.Angles(1.58, math.rad(-45), 1.58)
+ Tools[3].Parent = plr.Character
+
+ Tools[4].Grip = CFrame.new(-3.1, -0.67, -0.049) * CFrame.Angles(1.58, math.rad(-135), 1.58)
+ Tools[4].Parent = plr.Character
+
+ Tools[5].Grip = CFrame.new(2.2, -0.3, -0.03) * CFrame.Angles(1.58, math.rad(-360), 1.58)
+ Tools[5].Parent = plr.Character
+
+ Tools[6].Grip = CFrame.new(4.2, -0.3, 0) * CFrame.Angles(1.58, math.rad(-360), 1.58)
+ Tools[6].Parent = plr.Character
+
+ Tools[7].Grip = CFrame.new(6.2, -0.3, 0) * CFrame.Angles(1.58, math.rad(-360), 1.58)
+ Tools[7].Parent = plr.Character
+
+ Tools[8].Grip = CFrame.new(8.2, -0.3, 0) * CFrame.Angles(1.58, math.rad(-360), 1.58)
+ Tools[8].Parent = plr.Character
+
+ Tools[9].Grip = CFrame.new(10.2, -0.3, 0) * CFrame.Angles(1.58, math.rad(-360), 1.58)
+ Tools[9].Parent = plr.Character
+
+ Tools[10].Grip = CFrame.new(12.2, -0.3, 0) * CFrame.Angles(1.58, math.rad(-360), 1.58)
+ Tools[10].Parent = plr.Character
 end)
 
 
