@@ -1160,6 +1160,17 @@ local args = {
     [1] = ";morph me DonaldTrump "
 }
 game:GetService("ReplicatedStorage").HDAdminClient.Signals.RequestCommand:InvokeServer(unpack(args))
+
+local Player = game.Players.LocalPlayer
+local Time = 5
+local lastpostion = Player.Character.HumanoidRootPart.CFrame
+Player.Character.HumanoidRootPart.CFrame = CFrame.new(220.559616, 467.11972, 15.9669914, 0.948876262, 0.00119010347, -0.315646082, -8.76804673e-09, 0.999992907, 0.00377031998, 0.315648317, -0.00357756414, 0.948869526)
+
+wait(.4)
+local args = {
+    [1] = ";Freeze "
+}
+game:GetService("ReplicatedStorage").HDAdminClient.Signals.RequestCommand:InvokeServer(unpack(args))
 local args = {
     [1] = ";morph me Noob1 "
 }
@@ -1173,7 +1184,7 @@ local args = {
     [1] = ";char me 4152000667 " -- 3265501564
 }
 game:GetService("ReplicatedStorage").HDAdminClient.Signals.RequestCommand:InvokeServer(unpack(args))
-wait(1)
+wait(2)
 local args = {
     [1] = ";shirt me 9537661006 "
 }
@@ -1708,6 +1719,10 @@ loadstring(game:HttpGet("https://pastebin.com/raw/jR00xfMW"))()
 Hat1.Handle.Mesh:Destroy()
 Hat2.Handle.Mesh:Destroy()
 
+local args = {
+    [1] = ";unFreeze "
+}
+game:GetService("ReplicatedStorage").HDAdminClient.Signals.RequestCommand:InvokeServer(unpack(args))
 
 
 local hum0 = model:FindFirstChildOfClass("Humanoid")
@@ -1904,6 +1919,8 @@ uis.InputBegan:Connect(function(keycode)
   end
  end
 end)
+
+Player.Character.HumanoidRootPart.CFrame = lastpostion
 
 leftShoulder.Part0 = leftLeg
 rightShoulder.Part0 = rightLeg
