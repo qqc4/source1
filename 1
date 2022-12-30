@@ -2294,8 +2294,18 @@ game:GetService("ReplicatedStorage").HDAdminClient.Signals.RequestCommand:Invoke
 game:GetService("ReplicatedStorage").HDAdminClient.Signals.RequestCommand:InvokeServer(unpack(args))
     wait(1)
     
-    loadstring(game:HttpGet("https://pastebin.com/raw/jR00xfMW"))()
-    wait(.5)
+--loadstring(game:HttpGet("https://pastebin.com/raw/jR00xfMW"))()
+--loadstring(game:HttpGet('https://raw.githubusercontent.com/qqc4/source1/main/0'))()
+--SNooBeHub > DaccaHub
+for i,v in next, game:GetService("Players").LocalPlayer.Character:GetDescendants() do
+    if v:IsA("BasePart") and v.Name ~="HumanoidRootPart" then 
+    game:GetService("RunService").Heartbeat:connect(function()
+    v.Velocity = Vector3.new(-30,0,0)
+    end)
+    end
+    end
+
+wait(.5)
     
 game.StarterGui:SetCore("SendNotification", {
 Title = "✅!";
