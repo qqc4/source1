@@ -6679,7 +6679,7 @@ mouse.KeyUp:connect(function(key)
 		turn.Force = Vector3.new(0,0,0)
 	end
 end)
-
+--[[
 mouse.KeyDown:connect(function(key)
 	if key == "c" then
 		player.Character.Humanoid.PlatformStand = false
@@ -6691,6 +6691,7 @@ mouse.KeyUp:connect(function(key)
 		player.Character.Humanoid.PlatformStand = true
 	end
 end)
+]]
 
 
 newweld(currentcar.carbody,currentcar.carbody,player.Character["Nike Shoebox Costume"].Handle,CFrame.new(0,0,0))
