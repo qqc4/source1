@@ -1150,9 +1150,9 @@ Notify({
 
 Title = "Loaded !";
 
-Description = "Control [ F ]";
+Description = "";
 
-Duration = 2;
+Duration = 0.7;
 
 });
 end)
@@ -1244,7 +1244,7 @@ game:GetService("ReplicatedStorage").HDAdminClient.Signals.RequestCommand:Invoke
 game:GetService("ReplicatedStorage").HDAdminClient.Signals.RequestCommand:InvokeServer(unpack(args))
     wait(1)
     
-    loadstring(game:HttpGet("https://pastebin.com/raw/jR00xfMW"))()
+    --loadstring(game:HttpGet("https://pastebin.com/raw/jR00xfMW"))()
     wait(.2)
     
 game.StarterGui:SetCore("SendNotification", {
@@ -1260,9 +1260,9 @@ Notify({
 
 Title = "Loaded !";
 
-Description = "Control [ Z | X | C | F ]";
+Description = "";
 
-Duration = 2;
+Duration = 0.7;
 
 });
 
@@ -1399,14 +1399,13 @@ align(hh.pr5, Character["HumanoidRootPart"])
 align(hh.pr6, Character["HumanoidRootPart"])
 align(hh.pr7, Character["HumanoidRootPart"])
 
-
-		    hh.pr1.Attachment.Rotation = Vector3.new(-40,0,0)
-                hh.pr2.Attachment.Rotation = Vector3.new(-25,0,0)
-                hh.pr3.Attachment.Rotation = Vector3.new(0,0,0)
-                hh.pr4.Attachment.Rotation = Vector3.new(0,0,0)
-                hh.pr5.Attachment.Rotation = Vector3.new(0,90,0)
-                hh.pr6.Attachment.Rotation = Vector3.new(-10,0,0)
-                hh.pr7.Attachment.Rotation = Vector3.new(5,0,0)
+		    hh.pr1.Attachment.Rotation = Vector3.new(-90,22,0)
+                hh.pr2.Attachment.Rotation = Vector3.new(-90,-22,0)
+                hh.pr3.Attachment.Rotation = Vector3.new(-90,-1,0)
+                hh.pr4.Attachment.Rotation = Vector3.new(-90,-1,0)
+                hh.pr5.Attachment.Rotation = Vector3.new(90,-1,90)
+                hh.pr6.Attachment.Rotation = Vector3.new(70,-10,0)
+                hh.pr7.Attachment.Rotation = Vector3.new(70,10,0)   
 
 
 Character:WaitForChild("HumanoidRootPart"):FindFirstChild("Attachment").Name = "Attachment1"
@@ -1417,13 +1416,13 @@ Character:WaitForChild("HumanoidRootPart"):FindFirstChild("Attachment").Name = "
 Character:WaitForChild("HumanoidRootPart"):FindFirstChild("Attachment").Name = "Attachment6"
 Character:WaitForChild("HumanoidRootPart"):FindFirstChild("Attachment").Name = "Attachment7"
 
-Character:WaitForChild("HumanoidRootPart").Attachment1.Position = Vector3.new(0,-1,-1.4)
-Character:WaitForChild("HumanoidRootPart").Attachment2.Position = Vector3.new(0,0.1,-3.1)
-Character:WaitForChild("HumanoidRootPart").Attachment3.Position = Vector3.new(-0.5,-2,-0.85)
-Character:WaitForChild("HumanoidRootPart").Attachment4.Position = Vector3.new(0.5,-2,-0.85)
-Character:WaitForChild("HumanoidRootPart").Attachment5.Position = Vector3.new(0,-0.22,-0)
-Character:WaitForChild("HumanoidRootPart").Attachment6.Position = Vector3.new(0,0.70,-5.05)
-Character:WaitForChild("HumanoidRootPart").Attachment7.Position = Vector3.new(0,0.80,-7.1)
+                Character:WaitForChild("HumanoidRootPart").Attachment1.Position = Vector3.new(-0.9,-2,-1.3)
+                Character:WaitForChild("HumanoidRootPart").Attachment2.Position = Vector3.new(0.9,-2,-1.3)
+                Character:WaitForChild("HumanoidRootPart").Attachment3.Position = Vector3.new(-0.6,-1.1,-0.9)
+                Character:WaitForChild("HumanoidRootPart").Attachment4.Position = Vector3.new(0.6,-1.1,-0.9)
+                Character:WaitForChild("HumanoidRootPart").Attachment5.Position = Vector3.new(0,-1.3,-2.3)
+                Character:WaitForChild("HumanoidRootPart").Attachment6.Position = Vector3.new(-1,-2,-3.5)
+                Character:WaitForChild("HumanoidRootPart").Attachment7.Position = Vector3.new(1,-2,-3.5)
 
 Character:WaitForChild(Head).Handle.AccessoryWeld:Remove()
 local alignpos = Instance.new("AlignPosition", Character)
@@ -1469,11 +1468,11 @@ alignorien.MaxAngularVelocity = math.huge
 alignorien.Responsiveness = 200
 att2.Position = Vector3.new(x,y,z)
 
-                att2.Position = Vector3.new(0,-14.6,-4)
+                att2.Position = Vector3.new(0,-2.6,-3.6)
                 att2.Rotation = Vector3.new(-70,0,0)
                 
-                att4.Position = Vector3.new(0.047,-14.55,-4.6)
-                att4.Rotation = Vector3.new(-70,0,0)
+                att4.Position = Vector3.new(0.047,-2.55,-4.2)
+                att4.Rotation = Vector3.new(-70,0,0)   
 
 game.Players.LocalPlayer:GetMouse().KeyDown:Connect(function(KeyPressed)
  if KeyPressed == "x" then
@@ -1708,22 +1707,22 @@ Character:WaitForChild("HumanoidRootPart").Attachment7.Position = Vector3.new(0,
                 att4.Rotation = Vector3.new(-70,0,0)         
            toggle = true
  else
-Character:WaitForChild("HumanoidRootPart").Attachment1.Position = Vector3.new(-0.7,-2.5,-2.2)
-Character:WaitForChild("HumanoidRootPart").Attachment2.Position = Vector3.new(0.7,-2.5,-2.2)
-Character:WaitForChild("HumanoidRootPart").Attachment3.Position = Vector3.new(-0.6,-2.4,-2.7)
-Character:WaitForChild("HumanoidRootPart").Attachment4.Position = Vector3.new(0.6,-2.4,-2.7)
-Character:WaitForChild("HumanoidRootPart").Attachment5.Position = Vector3.new(0,-1.4,-2)
-Character:WaitForChild("HumanoidRootPart").Attachment6.Position = Vector3.new(-1.3,-0.5,-0.9)
-Character:WaitForChild("HumanoidRootPart").Attachment7.Position = Vector3.new(1.3,-0.5,-0.9)
+Character:WaitForChild("HumanoidRootPart").Attachment1.Position = Vector3.new(0,-1,-1.4)
+Character:WaitForChild("HumanoidRootPart").Attachment2.Position = Vector3.new(0,0.1,-3.1)
+Character:WaitForChild("HumanoidRootPart").Attachment3.Position = Vector3.new(-0.5,-2,-0.85)
+Character:WaitForChild("HumanoidRootPart").Attachment4.Position = Vector3.new(0.5,-2,-0.85)
+Character:WaitForChild("HumanoidRootPart").Attachment5.Position = Vector3.new(0,-0.22,-0)
+Character:WaitForChild("HumanoidRootPart").Attachment6.Position = Vector3.new(0,0.70,-5.05)
+Character:WaitForChild("HumanoidRootPart").Attachment7.Position = Vector3.new(0,0.80,-7.1)
 
                 
-		    hh.pr1.Attachment.Rotation = Vector3.new(0,0,0)
-                hh.pr2.Attachment.Rotation = Vector3.new(0,0,0)
+		    hh.pr1.Attachment.Rotation = Vector3.new(-40,0,0)
+                hh.pr2.Attachment.Rotation = Vector3.new(-25,0,0)
                 hh.pr3.Attachment.Rotation = Vector3.new(0,0,0)
                 hh.pr4.Attachment.Rotation = Vector3.new(0,0,0)
                 hh.pr5.Attachment.Rotation = Vector3.new(0,90,0)
-                hh.pr6.Attachment.Rotation = Vector3.new(0,0,0)
-                hh.pr7.Attachment.Rotation = Vector3.new(0,0,0)
+                hh.pr6.Attachment.Rotation = Vector3.new(-10,0,0)
+                hh.pr7.Attachment.Rotation = Vector3.new(5,0,0)
                 
                 att2.Position = Vector3.new(0,-14.6,-4)
                 att2.Rotation = Vector3.new(-70,0,0)
@@ -1833,9 +1832,9 @@ Notify({
 
 Title = "Loaded !";
 
-Description = "Control [ Q | E ]";
+Description = "";
 
-Duration = 1.5;
+Duration = 0.7;
 
 });
 
